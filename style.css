@@ -1,0 +1,296 @@
+/* Reset default browser styles */
+html, body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd, dt, form, fieldset, legend, input, textarea, button, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+footer{
+  text-align: center;
+  margin-top: 20px;
+  background-color: #2f2f2f;
+  padding: 10px;
+}
+/* Minimalist design */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #3e3e3e;
+  color: white;
+}
+
+#form_todo {
+  margin-bottom: 20px;
+  display: block;
+  grid-template-columns:  .2fr 2fr;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#todo_inp, #todo_cari {
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #545454;
+  width: calc(100% - 20px); /* Lebar input disesuaikan dengan lebar form */
+  background-color: #2f2f2f;
+  color: rgb(255, 255, 255);
+}
+#todo_inp::placeholder, #todo_cari::placeholder {
+  color: #838383; /* Ganti dengan warna yang Anda inginkan */
+}
+#todo_inp:focus, #todo_cari:focus {
+  outline: none; /* Menonaktifkan stroke */
+}
+
+button {
+  margin: 0 5px 10px 0;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+}
+
+#arr_reset, button[id^="btn_remove_"] {
+  background-color: #e74c3c; /* Merah */
+  margin-bottom: 10px; /* Memberi jarak bawah */
+}
+button[id^="todo_clear_"]{
+  background-color: #3498db; /* Merah */
+  margin-bottom: 10px; /* Memberi jarak bawah */
+}
+
+button:hover{
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+  background-color: #ffffff !important;
+  color: black !important;
+  transition: .2s;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #323232;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  #todo_inp {
+      width: 100%;
+  }
+}
+
+#tbl_todo tr:nth-child(odd) {
+  background-color: rgb(74, 74, 74); /* Warna latar belakang untuk baris ganjil */
+}
+
+#tbl_todo tr:nth-child(even) {
+  background-color: rgb(64, 64, 64); /* Warna latar belakang untuk baris genap */
+}
+
+/* ____________________ */
+#tbl_tr th {
+  background-color: #3498db;
+  color: white; /* Warna teks untuk thead */
+  font-weight: bold; /* Ketebalan teks untuk thead */
+  text-align: center;
+}
+
+/* Memastikan teks tidak melebihi lebar elemen */
+tr[id^="tr"] td:nth-child(2) {
+  max-width: 300px; /* Lebar maksimum elemen */
+  overflow: hidden; /* Teks yang melebihi lebar akan disembunyikan */
+  text-overflow: ellipsis; /* Teks yang melebihi lebar akan diakhiri dengan ellipsis */
+  white-space: normal; 
+}
+
+#div_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Posisikan tombol di tengah */
+}
+
+#div_btn button {
+  margin: 0; /* Menghapus margin agar tombol berdekatan */
+  /* Style tambahan untuk tombol jika diperlukan */
+}
+
+
+@media (max-width: 768px) {
+  #div_btn {
+    display: block;
+  }
+  
+  #div_btn button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+#div_btn button {
+  margin: 0px 5px 10px !important;
+}
+
+.disable{
+  display: none;
+}
+
+
+#tbl_tr th:nth-child(6){
+  width: 20%;
+}
+#tbl_tr th:nth-child(5){
+  width: 10%;
+}
+#tbl_tr th:nth-child(4){
+  width: 15%;
+}
+#tbl_tr th:nth-child(3){
+  width: 15%;
+}
+#tbl_tr th:nth-child(2){
+  width: 35%;
+}
+#tbl_tr th:nth-child(1){
+  width: 5%;
+}
+
+/* UNTUK PRINT */
+@media print {
+
+}
+
+#tbl_menu {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#main_tbl_todo{
+  background-color: #525252;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#main_tbl_todo p:nth-child(1){
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#tbl_todo_inp{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 750px) {
+  #tbl_todo_inp {
+    grid-template-columns: 1fr; /* Change grid layout to 1 fr when screen size is 750px or less */
+  }
+}
+
+
+/* -----SLIDE----- */
+#tbl_slide{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+/* -----END SLIDE----- */
+
+#tbl_todo tr td{
+  color: #bdbdbd;
+  transition: transform .3s ease;
+}
+#tbl_todo tr td:nth-child(1){
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+#tbl_todo tr td:hover {
+  color: white;
+  padding-left: 10px;
+  background-color: #323232;
+  transform: scale(1.1);
+}
+
+#date_and_time{
+  display: flex;
+  color: #838383;
+  font-weight: bold;
+  background-color: #2f2f2f;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+
+/* _________________ */
+
+th, td, tr {
+  padding: 8px;
+  text-align: left;
+}
+
+#tbl_menu button {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust table layout for smaller screens */
+  #tbl_todo tr{
+    font-size: 10px;
+    height: 50px;
+  }
+  #tbl_tr th{
+    font-size: 10px;
+  }
+  #tbl_todo tr td:nth-child(2){
+    max-width: 50px;
+  }
+  #div_btn button{
+    max-width: 50px;
+    margin: 0;
+    padding: 10px;
+    align-items: center;
+    margin-top: 2px;
+  }
+  #tbl_menu button {
+    display: block;
+    width: 100%;
+  }
+}
+
+#tbl_todo tr td:hover{
+    overflow: visible;
+    text-overflow: clip;
+    word-wrap: break-word;
+  }
+
+#tbl_todo tr td:nth-child(2){
+  text-align: start;
+}

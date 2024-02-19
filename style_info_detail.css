@@ -1,0 +1,14 @@
+#text_kosong,
+#total_tbl_terhapus,
+#total_reset_semua_tbl{
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+#tbl_info_detail{
+    display: flex;
+    border: none;
+    background-color: #393939;
+    padding: 10px;
+}

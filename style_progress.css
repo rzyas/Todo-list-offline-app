@@ -1,0 +1,96 @@
+#info_detail{
+    margin-top: 20px;
+}
+
+#progress_todo{
+    height: 10px;
+    width: 100%;
+    background-color: #353535;
+    margin-bottom: 20px;
+}
+
+#info_detail p:nth-child(1){
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#info_detail p:nth-child(2){
+    color: rgb(188, 188, 188);
+    margin-top: 10px;
+}
+
+
+/* GREEN */
+@keyframes green_progress {
+    0% {
+        background-color: #0cad00; /* Warna awal */
+    }
+    20% {
+        background-color: #0ed100; /* Warna awal */
+    }
+    40% {
+        background-color: #0ed100; /* Warna awal */
+    }
+    60% {
+        background-color: #0cad00; /* Warna awal */
+    }
+    80% {
+        background-color: #0cad00; /* Warna awal */
+    }
+    100% {
+        background-color: #0cad00; /* Warna akhir */
+    }
+}
+
+/* YELLOW */
+@keyframes yellow_progress {
+    0% {
+        background-color: #cdd700; /* Warna awal */
+    }
+    20% {
+        background-color: #e7f300; /* Warna awal */
+    }
+    40% {
+        background-color: #e7f300; /* Warna awal */
+    }
+    60% {
+        background-color: #cdd700; /* Warna awal */
+    }
+    80% {
+        background-color: #cdd700; /* Warna awal */
+    }
+    100% {
+        background-color: #cdd700; /* Warna akhir */
+    }
+}
+
+/* RED */
+@keyframes red_progress {
+    0% {
+        background-color: #ad0000; /* Warna awal */
+    }
+    20% {
+        background-color: #cb0000; /* Warna awal */
+    }
+    40% {
+        background-color: #cb0000; /* Warna awal */
+    }
+    60% {
+        background-color: #ad0000; /* Warna awal */
+    }
+    80% {
+        background-color: #ad0000; /* Warna awal */
+    }
+    100% {
+        background-color: #ad0000; /* Warna akhir */
+    }
+}
+
+#todo_progress {
+    /* Properti lain yang sudah ada */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 10px;
+    animation: yellow_progress 1s linear infinite;
+}

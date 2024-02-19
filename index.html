@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_progress.css">
+  <link rel="stylesheet" href="style_info_detail.css">
+</head>
+<body>
+  <div id="date_and_time">
+    <p>Tanggal dan Waktu: </p>
+    <p id="show_date"></p>
+  </div>
+  
+  <div id="main_tbl_todo" class="print">
+    <p>TABLE TODO</p>
+
+    <!-- <table>
+      <div id="tbl_menu">
+        <button id="rapikan_nomor">Urutkan Ulang Nomor</button>
+        <button id="table_cetak">Print Table</button>
+        <button id="arr_reset">Reset Semua Data</button>
+      </div> 
+      <thead>
+        <tr id="tbl_tr">
+          <th>No</th>
+          <th>Keterangan</th>
+          <th>Waktu Dibuat</th>
+          <th>Waktu Selesai</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tbl_todo">
+
+        <tr id="tr_kosong">
+          <td>0</td>
+          <td>Tidak ada keterangan</td>
+          <td>Table belum dibuat</td>
+          <td>Table belum dibuat</td>
+          <td>Tidak ada status
+          </td>
+          <td>Aksi tidak tersedia</td>
+        </tr>
+      </tbody>
+    </table> -->
+
+
+    <!-- _________________________________________________ -->
+
+    <div id="tbl_menu">
+      <button id="rapikan_nomor">Urutkan Ulang Nomor</button>
+      <button id="table_cetak">Print Table</button>
+      <button id="arr_reset">Reset Semua Data</button>
+    </div>
+    
+    <table>
+      <thead>
+        <tr id="tbl_tr">
+          <th>No</th>
+          <th>Keterangan</th>
+          <th>Waktu Dibuat</th>
+          <th>Waktu Selesai</th>
+          <th>Status</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tbl_todo">
+        <tr id="tr_kosong">
+          <td>0</td>
+          <td>Tidak ada keterangan</td>
+          <td>Table belum dibuat</td>
+          <td>Table belum dibuat</td>
+          <td>Tidak ada status</td>
+          <td>Aksi tidak tersedia</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- _________________________________________________ -->
+
+    <div>
+      <div id="tbl_slide">
+        <button id="btn_prev">Previous</button>
+        <button id="btn_next">Next</button>
+      </div> 
+    </div>
+  
+    <div id="tbl_todo_inp">
+      <div>
+        <label for="todo_inp">Input Keterangan</label>
+        <form id="form_todo">
+          <input type="text" name="todo_inp" id="todo_inp" placeholder="Masukan Keterangan Todo">
+          <button type="submit">Tambahkan</button>
+        </form>
+      </div>
+
+      <div>
+        <label for="todo_cari">Pencarian</label>
+        <input type="text" id="todo_cari" placeholder="Cari Keterangan...">
+        <button id="todo_cari_reset"></button>
+        <p id="todo_cari_inp"></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="info_detail">
+    <p>Presentase tugas terselesaikan: <span id="todo_presentase">0%</span></p>
+    <div id="progress_todo">
+      <p id="todo_progress"></p>
+    </div>
+    
+    <table id="tbl_info_detail">
+      <tr>
+        <td>Total input text kosong:</td>
+        <td><span id="text_kosong">0</span></td>
+      </tr>
+      <tr>
+        <td>Total table yang dihapus</td>
+        <td><span id="total_tbl_terhapus">0</span></td>
+      </tr>
+      <tr>
+        <td>Total reset semua table</td>
+        <td><span id="total_reset_semua_tbl">0</span></td>
+      </tr>
+      <tr>
+        <td><button id="btn_info_detail">Reset Data</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <p>Aprílias Cahya Putra &copy; 2024</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="script_progress.js"></script>
+  <script src="script_scroll_to_form.js"></script>
+  <script src="script_info_detail.js"></script>
+  <script src="script_slides.js"></script>
+  <script src="script_tanggal.js"></script>
+</body>
+</html>
